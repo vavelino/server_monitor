@@ -7,18 +7,18 @@ Chart.register(...registerables);
 
 const MetricsCard = (props) => {
   const [chartData, setChartData] = useState({
-    labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+    labels: [],
     datasets: [
       {
         label: "CPU Usage",
-        data: [1, 10, 50, 20, 30, 2],
+        data: [],
         backgroundColor: "rgba(0, 99, 132, 0.2)",
         borderColor: "rgba(0, 99, 132, 1)",
         borderWidth: 1,
       },
       {
         label: "Memory Usage",
-        data: [12, 19, 3, 5, 2, 3],
+        data: [],
         backgroundColor: "rgba(255, 99, 132, 0.2)",
         borderColor: "rgba(255, 99, 132, 1)",
         borderWidth: 1,
@@ -37,6 +37,7 @@ const MetricsCard = (props) => {
       )
         .then((response) => response.json())
         .then((data) => {
+          if (data.status == "error") return;
           const cpuUsageList = data.map((item) => item.cpu_usage);
           const memoryUsageList = data.map((item) => item.memory_usage);
           const labelDateList = data.map((item) => item.metrics_date_time);
@@ -72,7 +73,7 @@ const MetricsCard = (props) => {
     fetchChartData();
     const interval = setInterval(() => {
       fetchChartData();
-    }, 1000);
+    }, 5000);
     return () => {
       clearInterval(interval);
     };
@@ -84,11 +85,10 @@ const MetricsCard = (props) => {
       id={"Card_" + props.id}
     >
       <Card.Body id={"Card_Body_" + props.id}>
-        <Card.Title id={"Card_Title_" + props.id}>
-          {" "}
-          {props.name} - {props.status} - {props.id}
-        </Card.Title>       
-          <Line id={"Line_" + props.id} data={chartData} />   
+        <Card.Title id={"Card_Title_" + props.id}>     
+          {props.name} - {props.status}
+        </Card.Title>
+        <Line id={"Line_" + props.id} data={chartData} />
       </Card.Body>
     </Card>
   );
