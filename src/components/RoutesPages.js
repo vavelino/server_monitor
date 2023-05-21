@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import ServerList from "../ServerList/ServerList";
-import Metrics from "../Metrics/Metrics";
+import ServerList from "./Pages/ServerList/ServerList";
+import Metrics from "./Pages/Metrics/Metrics";
 
 const Contact = () => <h1>Contact Page</h1>;
 

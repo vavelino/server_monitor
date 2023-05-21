@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import RoutesPages from "./components/Pages/RoutesPages";
+import RoutesPages from "./components/RoutesPages";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
