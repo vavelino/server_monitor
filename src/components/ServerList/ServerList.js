@@ -21,7 +21,7 @@ const ServerList = () => {
   return (
     <div class="container-fluid bg-light text-dark p-1">
       <div class="container bg-light p-3">
-        <h1 class="display-4 fw-bold">Server List</h1>
+        <h1 class="display-6 fw-bold">Server List</h1>
       </div>
       <Container fluid="md">
         <Row>

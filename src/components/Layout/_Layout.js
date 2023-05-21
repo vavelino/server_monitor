@@ -6,7 +6,7 @@ import Navbar from "react-bootstrap/Navbar";
 function Layout() {
   return (
     <div>
-      <Navbar bg="dark" variant="dark">
+      {/* <Navbar bg="dark" variant="dark">
         <Container>
           <Navbar.Brand href="#home">Server Monitor</Navbar.Brand>
           <Nav className="me-auto">
@@ -15,7 +15,7 @@ function Layout() {
             <Nav.Link href="#pricing">Pricing</Nav.Link>
           </Nav>
         </Container>
-      </Navbar>
+      </Navbar> */}
       <script
         src="https://cdn.jsdelivr.net/npm/react/umd/react.production.min.js"
         crossorigin
@@ -30,10 +30,8 @@ function Layout() {
         src="https://cdn.jsdelivr.net/npm/react-bootstrap@next/dist/react-bootstrap.min.js"
         crossorigin
       ></script>
-
       <script>var Alert = ReactBootstrap.Alert;</script>
     </div>
   );
 }
-
 export default Layout;
