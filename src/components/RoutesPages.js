@@ -6,6 +6,7 @@ import Navbar from "react-bootstrap/Navbar";
 import ServerList from "./Pages/ServerList/ServerList";
 import Metrics from "./Pages/Metrics/Metrics";
 import LogTable from "./Pages/LogPage/LogPage";
+import SettingsPage from "./Pages/settingsPage/settingsPage";
 
 const Contact = () => <h1>Configurations Page</h1>;
 
@@ -25,6 +26,9 @@ const RoutesPages = () => {
             <Nav.Link as={Link} to="/log">
               Log
             </Nav.Link>
+            <Nav.Link as={Link} to="/configuration">
+              Configuration
+            </Nav.Link>
           </Nav>
         </Container>
       </Navbar>
@@ -32,6 +36,7 @@ const RoutesPages = () => {
         <Route path="/" element={<ServerList />} />
         <Route path="/metrics" element={<Metrics />} />
         <Route path="/log" element={<LogTable />} />
+        <Route path="/configuration" element={<SettingsPage />} />
         <Route path="*" element={<h1>Page Not Found</h1>} />
       </Routes>
     </Router>

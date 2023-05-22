@@ -29,9 +29,7 @@ const LogTable = () => {
   return (
     <Table striped bordered>
       <thead>
-        <tr>
-          <th>#</th>
-          <th>Server ID</th>
+        <tr>        
           <th>Name</th>
           <th>Status Code</th>
           <th>Description</th>
@@ -40,9 +38,7 @@ const LogTable = () => {
       </thead>
       <tbody>
         {tableData.map((row, index) => (
-          <tr key={index}>
-            <td>{index + 1}</td>
-            <td>{row.server_id}</td>
+          <tr key={index}>       
             <td>{row.name}</td>
             <td>{row.status_code}</td>
             <td>{row.log_descript}</td>

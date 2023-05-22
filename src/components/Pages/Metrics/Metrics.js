@@ -7,7 +7,7 @@ const Metrics = () => {
   const [servers, setServers] = useState([]);
   const fetchServers = async () => {
     try {
-      const response = await fetch("http://localhost/ServerMonitor/server.php");
+      const response = await fetch("http://localhost/ServerMonitor/serverMetrics.php");
       const data = await response.json();
       setServers(data);
     } catch (error) {
