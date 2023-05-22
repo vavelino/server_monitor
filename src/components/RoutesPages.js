@@ -7,9 +7,6 @@ import ServerList from "./Pages/ServerList/ServerList";
 import Metrics from "./Pages/Metrics/Metrics";
 import LogTable from "./Pages/LogPage/LogPage";
 import SettingsPage from "./Pages/settingsPage/settingsPage";
-
-const Contact = () => <h1>Configurations Page</h1>;
-
 const RoutesPages = () => {
   return (
     <Router>
@@ -42,4 +39,5 @@ const RoutesPages = () => {
     </Router>
   );
 };
+
 export default RoutesPages;

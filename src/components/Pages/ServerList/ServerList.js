@@ -41,4 +41,5 @@ const ServerList = () => {
     </div>
   );
 };
+
 export default ServerList;

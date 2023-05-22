@@ -16,9 +16,7 @@ const LogTable = () => {
           console.error("Ocorreu um erro:", error);
         });
     };
-
     fetchTableData();
-
     const interval = setInterval(fetchTableData, 5000);
 
     return () => {
